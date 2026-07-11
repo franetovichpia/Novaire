@@ -2,9 +2,9 @@ export const siteConfig = {
   name: "Novaire",
   description:
     "Diseñamos páginas web, sistemas de gestión y aplicaciones digitales para empresas y emprendimientos.",
-  email: "franetovichmariapia@gmail.com",
+  email: "agencianovaire@gmail.com",
   whatsapp: "https://wa.me/541121542210",
-  instagram: "#",
+  instagram: "https://www.instagram.com/studionovaire?igsh=d3g2bWQzZXV0aGJi&utm_source=qr",
   linkedin: "#",
 };
 
