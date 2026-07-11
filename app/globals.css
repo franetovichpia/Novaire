@@ -1,26 +1,269 @@
 @import "tailwindcss";
-
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fbf7f2;
+  --foreground: #171513;
+
+  --card: #ffffff;
+  --card-foreground: #171513;
+
+  --primary: #d47a3a;
+  --primary-foreground: #ffffff;
+
+  --secondary: #f3e8dc;
+  --secondary-foreground: #1f1b17;
+
+  --muted: #f7efe7;
+  --muted-foreground: #756b63;
+
+  --border: #e8ddd2;
+  --ring: #d47a3a;
+}:root {
+  /* ===========================
+      COLORS
+  =========================== */
+
+  --background: #faf8f5;
+  --foreground: #1f1f1f;
+
+  --card: #ffffff;
+  --card-foreground: #1f1f1f;
+
+  --primary: #9b8a76;
+  --primary-foreground: #ffffff;
+
+  --secondary: #f2ede6;
+  --secondary-foreground: #1f1f1f;
+
+  --muted: #f6f2ec;
+  --muted-foreground: #6e6a66;
+
+  --border: #e6dfd6;
+
+  --ring: #b6a48d;
+
+  /* ===========================
+      TYPOGRAPHY
+  =========================== */
+
+  --font-display: var(--font-display);
+  --font-sans: var(--font-sans);
+
+  /* ===========================
+      RADIUS
+  =========================== */
+
+  --radius: 1.5rem;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-border: var(--border);
+
+  --color-ring: var(--ring);
+
+  --radius-xl: var(--radius);
+
+  --font-display: var(--font-display);
+  --font-sans: var(--font-sans);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ===========================
+    RESET
+=========================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
+  min-height: 100vh;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
+
+/* ===========================
+    TYPOGRAPHY
+=========================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-display {
+  font-family: var(--font-display);
+  color: var(--foreground);
+  letter-spacing: -0.04em;
+}
+
+p {
+  color: var(--muted-foreground);
+  line-height: 1.8;
+}
+
+/* ===========================
+    LINKS
+=========================== */
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+a:hover {
+  opacity: 0.85;
+}
+
+/* ===========================
+    BUTTONS
+=========================== */
+
+button {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* ===========================
+    IMAGES
+=========================== */
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ===========================
+    INPUTS
+=========================== */
+
+input,
+textarea,
+select {
+  outline: none;
+  border: 1px solid var(--border);
+  background: white;
+}
+
+/* ===========================
+    SELECTION
+=========================== */
+
+::selection {
+  background: rgba(155, 138, 118, 0.22);
+}
+
+/* ===========================
+    SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f4efe9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d4c8bb;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b9aa98;
+}
+
+/* ===========================
+    HELPERS
+=========================== */
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.section-padding {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(20px);
+}
+
+.card-hover {
+  transition: all 0.35s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-6px);
+}
+
+.shadow-soft {
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.04),
+    0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.border-soft {
+  border: 1px solid var(--border);
+}
+
+/* ===========================
+    ANIMATIONS
+=========================== */
+
+.fade-up {
+  animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scroll horizontal de servicios */
+
+#services [class*="overflow-x-auto"] {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+#services [class*="overflow-x-auto"]::-webkit-scrollbar {
+  display: none;
+}
+
