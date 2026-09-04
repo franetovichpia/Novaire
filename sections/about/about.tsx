@@ -87,7 +87,27 @@ export function About() {
 
             <a
               href="#contact"
-              className="mt-12 inline-flex w-fit items-center gap-2 rounded-full bg-foreground px-7 py-4 text-sm font-semibold text-background"
+              className="
+              mt-12 
+              inline-flex 
+              w-fit 
+              items-center 
+              gap-3 
+              rounded-full
+              border
+              border-[#d8cdbf]
+              bg-white
+              px-8
+              py-4
+              font-medium
+              text-[#1c1c1c]
+              transition-all
+              duration-300
+              hover:-translate-y-1
+              hover:border-[#d47a3a]
+              hover:bg-[#d47a3a]
+              hover:text-white
+              "
             >
               Trabajemos juntos
               <ArrowRight className="h-4 w-4" />

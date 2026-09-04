@@ -40,9 +40,12 @@ const steps = [
 
 export function Process() {
   return (
-    <section id="process" className="bg-[#181614] py-28 text-white sm:py-32">
+    <section
+      id="process"
+      className="bg-[#181614] py-28 text-white sm:py-32"
+    >
       <Container>
-        <div className="[&_h2]:text-white [&_p]:text-white/60 [&_span]:text-[#e39a61]">
+        <div className="[&_h2]:text-[#F8F3ED] [&_p]:text-[#CFC6BE] [&_span]:text-[#E69A5B]">
           <SectionHeading
             eyebrow="Nuestro proceso"
             title="Una metodología clara para convertir una idea en una solución real."
@@ -61,15 +64,17 @@ export function Process() {
                 duration: 0.5,
                 delay: index * 0.05,
               }}
-              className="grid gap-6 border-t border-white/15 py-9 md:grid-cols-[0.25fr_0.75fr_1fr] md:items-start"
+              className="grid gap-6 border-t border-[#403A35] py-9 md:grid-cols-[0.25fr_0.75fr_1fr] md:items-start"
             >
-              <span className="text-sm text-[#e39a61]">{step.number}</span>
+              <span className="text-sm font-medium text-[#E69A5B]">
+                {step.number}
+              </span>
 
-              <h3 className="font-display text-3xl font-medium tracking-[-0.04em] text-white">
+              <h3 className="font-display text-3xl font-medium tracking-[-0.05em] text-[#F8F3ED] sm:text-4xl">
                 {step.title}
               </h3>
 
-              <p className="max-w-xl text-sm leading-7 text-white/55">
+              <p className="max-w-xl text-base leading-8 text-[#CFC6BE]">
                 {step.description}
               </p>
             </motion.article>

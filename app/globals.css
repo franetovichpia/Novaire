@@ -1,4 +1,5 @@
 @import "tailwindcss";
+
 :root {
   --background: #fbf7f2;
   --foreground: #171513;
@@ -10,51 +11,19 @@
   --primary-foreground: #ffffff;
 
   --secondary: #f3e8dc;
-  --secondary-foreground: #1f1b17;
+  --secondary-foreground: #2f2924;
 
   --muted: #f7efe7;
   --muted-foreground: #756b63;
 
   --border: #e8ddd2;
   --ring: #d47a3a;
-}:root {
-  /* ===========================
-      COLORS
-  =========================== */
-
-  --background: #faf8f5;
-  --foreground: #1f1f1f;
-
-  --card: #ffffff;
-  --card-foreground: #1f1f1f;
-
-  --primary: #9b8a76;
-  --primary-foreground: #ffffff;
-
-  --secondary: #f2ede6;
-  --secondary-foreground: #1f1f1f;
-
-  --muted: #f6f2ec;
-  --muted-foreground: #6e6a66;
-
-  --border: #e6dfd6;
-
-  --ring: #b6a48d;
-
-  /* ===========================
-      TYPOGRAPHY
-  =========================== */
 
   --font-display: var(--font-display);
   --font-sans: var(--font-sans);
 
-  /* ===========================
-      RADIUS
-  =========================== */
-
   --radius: 1.5rem;
 }
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -118,12 +87,10 @@ h5,
 h6,
 .font-display {
   font-family: var(--font-display);
-  color: var(--foreground);
   letter-spacing: -0.04em;
 }
 
 p {
-  color: var(--muted-foreground);
   line-height: 1.8;
 }
 
