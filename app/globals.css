@@ -19,11 +19,49 @@
   --border: #e8ddd2;
   --ring: #d47a3a;
 
+  --accent: #fff1b5;
+  --accent-foreground: #3a3120;
+
+  --inverse: #171513;
+  --inverse-foreground: #ffffff;
+
   --font-display: var(--font-display);
   --font-sans: var(--font-sans);
+  --font-evolve: var(--font-evolve);
 
   --radius: 1.5rem;
+
+  color-scheme: light;
 }
+
+:root[data-theme="dark"] {
+  --background: #100e0c;
+  --foreground: #f6f1ea;
+
+  --card: #181512;
+  --card-foreground: #f6f1ea;
+
+  --primary: #e6935a;
+  --primary-foreground: #171310;
+
+  --secondary: #221d18;
+  --secondary-foreground: #e9e1d8;
+
+  --muted: #1c1815;
+  --muted-foreground: #a89c8e;
+
+  --border: #2c2620;
+  --ring: #e6935a;
+
+  --accent: #fff1b5;
+  --accent-foreground: #2a2410;
+
+  --inverse: #f6f1ea;
+  --inverse-foreground: #171310;
+
+  color-scheme: dark;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -40,6 +78,12 @@
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
 
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-inverse: var(--inverse);
+  --color-inverse-foreground: var(--inverse-foreground);
+
   --color-border: var(--border);
 
   --color-ring: var(--ring);
@@ -48,6 +92,7 @@
 
   --font-display: var(--font-display);
   --font-sans: var(--font-sans);
+  --font-evolve: var(--font-evolve);
 }
 
 /* ===========================
@@ -73,6 +118,11 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.font-evolve {
+  font-family: var(--font-evolve);
 }
 
 /* ===========================
@@ -232,5 +282,20 @@ select {
 
 #services [class*="overflow-x-auto"]::-webkit-scrollbar {
   display: none;
+}
+
+/* ===========================
+    PROJECT CARDS (blur / glass)
+=========================== */
+
+.project-glass {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(18px) saturate(1.1);
+  -webkit-backdrop-filter: blur(18px) saturate(1.1);
+}
+
+.text-accent-glow {
+  text-shadow: 0 0 24px rgba(255, 241, 181, 0.35);
 }
 

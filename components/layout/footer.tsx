@@ -14,7 +14,7 @@ export function Footer() {
               href="/"
               className="font-display text-5xl font-medium tracking-[-0.06em] text-white sm:text-6xl"
             >
-              Novaire
+              Novaire<span style={{ color: "#fff1b5" }}>.</span>
             </Link>
 
             <p className="mt-6 max-w-lg text-sm leading-7 text-white/50">
