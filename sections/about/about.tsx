@@ -24,6 +24,12 @@ const values = [
     description:
       "Creemos en una comunicación directa, transparente y colaborativa.",
   },
+  {
+    number: "04",
+    title: "Compromiso con el resultado",
+    description:
+      "Medimos el éxito de un proyecto por el impacto real que genera en el negocio.",
+  },
 ];
 
 export function About() {
@@ -37,7 +43,7 @@ export function About() {
             viewport={{ once: true, amount: 0.2 }}
           >
             <span className="text-sm font-semibold uppercase tracking-[0.22em] text-primary">
-              Sobre Novaire
+              Quiénes somos
             </span>
 
             <div className="mt-8 flex aspect-[4/5] items-end overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#efd3bd] via-[#f8eee5] to-[#d77d3e] p-8">
@@ -57,15 +63,15 @@ export function About() {
             className="flex flex-col justify-center"
           >
             <h2 className="font-display text-4xl font-medium leading-tight tracking-[-0.05em] sm:text-5xl lg:text-6xl">
-              Creamos herramientas digitales que ayudan a los negocios a verse
-              mejor, trabajar mejor y crecer.
+              Somos Novaire Studio: un equipo que diseña y construye
+              productos digitales de punta a punta.
             </h2>
 
             <p className="mt-8 max-w-2xl text-base leading-8 text-muted-foreground">
-              Novaire nace como un estudio digital enfocado en desarrollar
-              soluciones personalizadas para empresas, profesionales y
-              emprendimientos. No trabajamos con fórmulas genéricas: cada
-              proyecto parte de una necesidad concreta.
+              Trabajamos junto a empresas, profesionales y emprendimientos
+              que necesitan una presencia digital sólida. No usamos fórmulas
+              genéricas: cada proyecto parte de una necesidad concreta, y
+              nuestro trabajo se guía por estos valores.
             </p>
 
             <div className="mt-12 space-y-7">
@@ -74,7 +80,12 @@ export function About() {
                   key={value.number}
                   className="grid gap-4 border-t border-border pt-6 sm:grid-cols-[0.15fr_0.35fr_0.5fr]"
                 >
-                  <span className="text-sm text-primary">{value.number}</span>
+                  <span
+                    className="text-sm font-semibold"
+                    style={{ color: "#c9a227" }}
+                  >
+                    {value.number}
+                  </span>
 
                   <h3 className="font-semibold">{value.title}</h3>
 
@@ -86,7 +97,7 @@ export function About() {
             </div>
 
             <a
-              href="#contact"
+              href="#booking"
               className="
               mt-12 
               inline-flex 
